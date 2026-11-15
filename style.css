@@ -1,0 +1,428 @@
+/* ===================== ROOT VARIABLES ===================== */
+:root {
+    --cream: #F8F4F0;
+    /* Light background */
+    --dark-brown: #3D2314;
+    /* Dark sections + buttons */
+    --text-dark: #2C1A12;
+    /* Main text color */
+    --text-muted: #6B5B4F;
+    /* Soft text */
+}
+
+/* ===================== GLOBAL ===================== */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* ===================== NAVBAR ===================== */
+.navbar {
+    background-color: transparent;
+    padding: 1.2rem 0;
+    transition: all 0.3s ease;
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.navbar.scrolled {
+    background-color: var(--cream);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--dark-brown) !important;
+    letter-spacing: -0.6px;
+}
+
+.nav-link {
+    color: var(--text-dark) !important;
+    font-weight: 500;
+    font-size: 0.90rem;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--dark-brown) !important;
+}
+
+/* Mobile menu icon */
+.navbar-toggler {
+    color: var(--dark-brown);
+}
+
+/* ===================== HERO SECTION ===================== */
+.hero {
+    background-color: var(--cream);
+    padding-top: 80px;
+    /* navbar ke liye space */
+}
+
+.hero-image img {
+    width: 100%;
+    height: 85vh;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 0;
+    /* Luna mein sharp edges hain */
+}
+
+.hero-content {
+    padding-left: 3rem;
+}
+
+.hero-title {
+    font-size: 3.8rem;
+    font-weight: 500;
+    line-height: 1.15;
+    color: var(--dark-brown);
+    margin-bottom: 1.2rem;
+}
+
+.hero-location {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+.hero-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    max-width: 480px;
+    margin-bottom: 2rem;
+}
+
+/* Hire me Button */
+.btn-hire {
+    background-color: var(--dark-brown);
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 0;
+    /* Luna style - no round */
+    transition: all 0.3s ease;
+}
+
+.btn-hire:hover {
+    background-color: #2a180e;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 991.98px) {
+    .hero-content {
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .hero-image img {
+        height: 60vh;
+    }
+
+    .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+}
+
+
+/* ===================== ABOUT SECTION ===================== */
+.about-section {
+    background-color: var(--dark-brown);
+    color: #f5f0eb;
+    padding: 100px 0;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 0.8rem;
+}
+
+.title-line {
+    width: 50px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 0 auto 2.5rem;
+}
+
+.about-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-about {
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    color: #fff;
+    padding: 11px 30px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 0;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-about:hover {
+    background-color: #fff;
+    color: var(--dark-brown);
+    border-color: #fff;
+}
+
+.cert-card {
+    text-align: center;
+}
+
+.cert-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cert-btn-wrapper .btn {
+    display: inline-block;
+}
+
+.btn-about-one {
+    color: rgb(35, 13, 2);
+    border: 1.5px solid rgba(21, 4, 4, 0.7);
+}
+
+.btn-about-one:hover {
+    background-color: lightsalmon;
+    color: var(--dark-brown);
+    border-color: #fff;
+}
+
+/* ===================== JOURNEY SECTION ===================== */
+.journey-section {
+    background-color: var(--cream);
+    padding: 100px 0;
+}
+
+.section-title-dark {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    font-weight: 500;
+    color: var(--dark-brown);
+    margin-bottom: 0.6rem;
+}
+
+.title-line-dark {
+    width: 50px;
+    height: 2px;
+    background-color: var(--dark-brown);
+    margin: 0 auto 1rem;
+    opacity: 0.5;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 0;
+}
+
+.journey-card {
+    background: #fff;
+    border: 1px solid rgba(61, 35, 20, 0.08);
+    padding: 2rem 1.5rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    border-radius: 0;
+}
+
+.journey-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(61, 35, 20, 0.1);
+    border-color: rgba(61, 35, 20, 0.15);
+}
+
+.journey-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(61, 35, 20, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+    color: var(--dark-brown);
+}
+
+.journey-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--dark-brown);
+    margin-bottom: 0.8rem;
+}
+
+.journey-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+/* ===================== CERTIFICATIONS SECTION ===================== */
+.certifications-section {
+    background-color: #f3ede6;
+    /* thoda darker cream */
+    padding: 100px 0;
+}
+
+.cert-card {
+    background: #fff;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    height: 100%;
+    border: 1px solid rgba(61, 35, 20, 0.08);
+    transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(61, 35, 20, 0.1);
+}
+
+.cert-icon {
+    font-size: 2rem;
+    color: var(--dark-brown);
+    margin-bottom: 1rem;
+}
+
+.cert-card h5 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: var(--dark-brown);
+    margin-bottom: 0.4rem;
+}
+
+.cert-org {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.6rem;
+}
+
+.cert-year {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--dark-brown);
+    background: rgba(61, 35, 20, 0.08);
+    padding: 3px 12px;
+}
+
+
+
+/* ===================== PRACTICE CARDS ===================== */
+.practice-section {
+    background-color: var(--cream);
+    padding: 100px 0;
+}
+
+.practice-card {
+    background: #fff;
+    border: 1px solid rgba(61, 35, 20, 0.1);
+    height: 100%;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.practice-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(61, 35, 20, 0.12);
+}
+
+.practice-card-header {
+    background-color: var(--dark-brown);
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.practice-card-body {
+    padding: 1.8rem 1.5rem;
+}
+
+.practice-card-body h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--dark-brown);
+    margin-bottom: 0.6rem;
+}
+
+.practice-card-body p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 1.3rem;
+    line-height: 1.6;
+}
+
+/* Contact Form */
+/* ===================== CONTACT FORM ===================== */
+.contact-form .form-control {
+    background-color: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 0;
+    padding: 14px 18px;
+    font-size: 1rem;
+}
+
+.contact-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.contact-form .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.45);
+    color: #fff;
+    box-shadow: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
